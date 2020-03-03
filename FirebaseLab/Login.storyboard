@@ -49,8 +49,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dont have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="31C-PR-9Cj">
-                                <rect key="frame" x="28" y="531" width="175" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dont have an account?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="31C-PR-9Cj">
+                                <rect key="frame" x="28" y="531" width="175" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -112,6 +112,7 @@
                         <outlet property="accountStateLabel" destination="Ggu-KH-muG" id="lbD-i8-Uq8"/>
                         <outlet property="accountStateMessageLabel" destination="31C-PR-9Cj" id="Oea-mJ-U9E"/>
                         <outlet property="loginButton" destination="emb-oy-uOq" id="NDe-gS-cPY"/>
+                        <outlet property="logoConstraint" destination="8TO-Me-EVx" id="4qS-gF-WgO"/>
                         <outlet property="passwordLabel" destination="84S-FJ-z0S" id="Hb5-kF-oaU"/>
                         <outlet property="passwordTextfield" destination="3ye-SF-hii" id="cfM-h8-OpO"/>
                         <outlet property="recycleImage" destination="Yyi-EJ-A6u" id="7hc-GS-Cje"/>

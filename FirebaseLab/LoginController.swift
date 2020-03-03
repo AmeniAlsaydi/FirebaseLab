@@ -25,12 +25,10 @@ class LoginController: UIViewController {
     @IBOutlet weak var accountStateMessageLabel: UILabel!
     @IBOutlet weak var accountStateButton: UIButton!
     
-    
-    
     @IBOutlet weak var logoConstraint: NSLayoutConstraint!
     
-    
-    
+    private var authSession = AuthenticationSession()
+
     var originialYConstraint: NSLayoutConstraint!
     
     private var accountState: AccountState = .existingUser
@@ -46,7 +44,7 @@ class LoginController: UIViewController {
         
         userTextFeild.delegate = self
         passwordTextfield.delegate = self
-        registerForKeyboardNotifcations()
+        //registerForKeyboardNotifcations()
         view.backgroundColor = .white
         
         
@@ -114,6 +112,53 @@ class LoginController: UIViewController {
             }, completion: nil)
         }
     }
+    
+    
+    @IBAction func loginButtonPressed(_ sender: Any) {
+        
+        guard let email = userTextFeild.text, !email.isEmpty, let password = passwordTextfield.text, !password.isEmpty else {
+            print("missing feilds")
+            return
+        }
+        
+        continueLoginFlow(email: email, password: password)
+    }
+    
+    private func continueLoginFlow(email: String, password: String) {
+           if accountState == .existingUser {
+               authSession.signExisitingUser(email: email, password: password) { (result) in
+                   switch result {
+                   case .failure(let error):
+                       DispatchQueue.main.async {
+                           self.accountStateMessageLabel.text = "\(error.localizedDescription)"
+                           self.accountStateMessageLabel.textColor = .systemRed
+                       }
+                   case .success(let authResultData):
+                       DispatchQueue.main.async {
+                           //self.navigateToMainView()
+                       }
+                   }
+               }
+                   
+               } else {
+                   authSession.createNewUser(email: email, password: password) { (result) in
+                       switch result {
+                       case .failure(let error):
+                           DispatchQueue.main.async {
+                               self.accountStateMessageLabel.text = "\(error.localizedDescription)"
+                               self.accountStateMessageLabel.textColor = .systemRed
+
+                           }
+                       case .success(let authResultData):
+                           DispatchQueue.main.async {
+                               // TODO: navigate to the main VC
+                               //self.navigateToMainView()
+
+                           }
+                       }
+                   }
+               }
+           }
 }
 
 
