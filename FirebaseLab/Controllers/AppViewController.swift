@@ -17,6 +17,7 @@ enum ProfileState {
 
 class AppViewController: UIViewController {
 
+    @IBOutlet weak var userImage: UIImageView!
     @IBOutlet weak var displayNameLabel: UILabel!
     @IBOutlet weak var phoneLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
@@ -85,6 +86,8 @@ class AppViewController: UIViewController {
         
         let request = Auth.auth().currentUser?.createProfileChangeRequest()
         request?.displayName = displayName
+        let userPhotoUrl = "https://randomuser.me/api/portraits/med/men/8.jpg"
+        request?.photoURL = URL(string: userPhotoUrl)
         
         request?.commitChanges(completion: { [unowned self] (error) in
                   if let error = error  {
@@ -92,9 +95,16 @@ class AppViewController: UIViewController {
                   } else {
                       self.showAlert(title:"Profile change" , message: "Profile successfully created")
                     self.displayNameLabel.text = displayName
+                    
+                   
                   }
               })
+        
+        
+        
         
     }
     
 }
+
+// https://firebase.google.com/docs/auth/ios/manage-users

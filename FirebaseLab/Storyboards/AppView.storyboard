@@ -145,6 +145,7 @@
                         <outlet property="numberTextField" destination="hRI-Mb-gbp" id="aoX-Rm-lY2"/>
                         <outlet property="phoneLabel" destination="w0n-5h-4ym" id="KSx-62-f8o"/>
                         <outlet property="updateButton" destination="B5e-56-Aao" id="xXG-uZ-LS7"/>
+                        <outlet property="userImage" destination="O17-dq-LP8" id="jm4-XU-AqI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VaU-5d-0Dh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
