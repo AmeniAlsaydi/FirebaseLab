@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--My Profile-->
+        <scene sceneID="v5e-HC-ZCI">
+            <objects>
+                <viewController storyboardIdentifier="AppViewController" id="IED-nw-br1" customClass="AppViewController" customModule="FirebaseLab" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jc5-Ba-Xco">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="O17-dq-LP8">
+                                <rect key="frame" x="160.5" y="160.5" width="93" height="93"/>
+                                <color key="tintColor" red="0.087641025519999999" green="0.2725914935" blue="0.029153456729999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="O17-dq-LP8" secondAttribute="height" multiplier="93:94" id="ds6-Ai-OBK"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="O17-dq-LP8" firstAttribute="top" secondItem="BDM-qN-Ga7" secondAttribute="top" constant="20" id="djZ-c0-1DT"/>
+                            <constraint firstItem="O17-dq-LP8" firstAttribute="width" secondItem="jc5-Ba-Xco" secondAttribute="width" multiplier="0.224638" id="h0b-Up-0hv"/>
+                            <constraint firstItem="O17-dq-LP8" firstAttribute="centerX" secondItem="jc5-Ba-Xco" secondAttribute="centerX" id="y71-qH-DgU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="BDM-qN-Ga7"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="My Profile" id="6nO-rR-iZr"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VaU-5d-0Dh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="855.07246376811599" y="92.410714285714278"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Idf-3Q-f2P">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mNP-s4-zGB" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="FuL-gW-taR">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="IED-nw-br1" kind="relationship" relationship="rootViewController" id="6YK-Zp-NOF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4dw-ax-udT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-55.072463768115945" y="92.410714285714278"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="person.circle" catalog="system" width="64" height="60"/>
+    </resources>
+</document>

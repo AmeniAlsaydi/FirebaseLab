@@ -135,7 +135,7 @@ class LoginController: UIViewController {
                        }
                    case .success(let authResultData):
                        DispatchQueue.main.async {
-                           //self.navigateToMainView()
+                           self.navigateToMainView()
                        }
                    }
                }
@@ -151,14 +151,20 @@ class LoginController: UIViewController {
                            }
                        case .success(let authResultData):
                            DispatchQueue.main.async {
-                               // TODO: navigate to the main VC
-                               //self.navigateToMainView()
+                              
+                               self.navigateToMainView()
 
                            }
                        }
                    }
                }
            }
+    
+    private func navigateToMainView() {
+        // we have the uiviewcontroller extension
+        UIViewController.showViewController(storyBoardName: "AppView", viewControllerId: "AppViewController")
+        
+    }
 }
 
 
