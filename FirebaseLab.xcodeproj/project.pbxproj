@@ -19,6 +19,7 @@
 		B7669ECA240E2932003F821D /* AppView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7669EC9240E2932003F821D /* AppView.storyboard */; };
 		B7669ECD240E2B5B003F821D /* UIVCExt+Nav.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7669ECC240E2B5B003F821D /* UIVCExt+Nav.swift */; };
 		B7669ECF240E2BBE003F821D /* AppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7669ECE240E2BBE003F821D /* AppViewController.swift */; };
+		B7669ED1240ED596003F821D /* AlertExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7669ED0240ED596003F821D /* AlertExt.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		B7669EC9240E2932003F821D /* AppView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AppView.storyboard; sourceTree = "<group>"; };
 		B7669ECC240E2B5B003F821D /* UIVCExt+Nav.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIVCExt+Nav.swift"; sourceTree = "<group>"; };
 		B7669ECE240E2BBE003F821D /* AppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewController.swift; sourceTree = "<group>"; };
+		B7669ED0240ED596003F821D /* AlertExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertExt.swift; sourceTree = "<group>"; };
 		C396AB6BE517F935A9224FC2 /* Pods_FirebaseLab.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirebaseLab.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -107,6 +109,7 @@
 				B7669EAB240E12A5003F821D /* AppDelegate.swift */,
 				B7669EAD240E12A5003F821D /* SceneDelegate.swift */,
 				B7669EB4240E12A7003F821D /* Assets.xcassets */,
+				B7669ED0240ED596003F821D /* AlertExt.swift */,
 			);
 			path = "Supporting files";
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7669ED1240ED596003F821D /* AlertExt.swift in Sources */,
 				B7669ECF240E2BBE003F821D /* AppViewController.swift in Sources */,
 				B7669EB0240E12A5003F821D /* LoginController.swift in Sources */,
 				B7669EAC240E12A5003F821D /* AppDelegate.swift in Sources */,
